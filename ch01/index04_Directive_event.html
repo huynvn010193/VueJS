@@ -8,16 +8,16 @@
 </head>
 <body>
   <div id="app">
-    <button v-on:click="clickedButton('Hello world',$event)">Click Me !</button>
+    <button v-on:click.once="clickedButton">Click Me !</button>
+    <a href="http://google.com.vn" v-on:click.prevent="clickedButton" target="_blank">Or here</a>
   </div>
   <script src="vue.js"></script>
   <script type="text/javascript">
     new Vue({
       el: '#app',
       methods: {
-        clickedButton: function(message, event) {
-          console.log(event);
-          alert(message); 
+        clickedButton: function() {
+          alert('Hello world'); 
         }
       }
     })

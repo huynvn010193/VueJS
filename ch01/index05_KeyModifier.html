@@ -8,16 +8,15 @@
 </head>
 <body>
   <div id="app">
-    <button v-on:click="clickedButton('Hello world',$event)">Click Me !</button>
+    <input type="text" v-on:keyup.enter.space="pressedSomethingInteresting">
   </div>
   <script src="vue.js"></script>
   <script type="text/javascript">
     new Vue({
       el: '#app',
       methods: {
-        clickedButton: function(message, event) {
-          console.log(event);
-          alert(message); 
+        pressedSomethingInteresting: function() {
+          alert("You pressed the Enter or Space key");
         }
       }
     })
