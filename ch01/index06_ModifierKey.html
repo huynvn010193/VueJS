@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DemoVueJS</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-on:keyup.shift.enter="myListener">
+    <button v-on:click.meta="myButtonListener">Click here !</button>
+  </div>
+  <script src="vue.js"></script>
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+      methods: {
+        myListener: function() {
+          alert("You pressed shift + enter");
+        },
+        myButtonListener: function () {
+          alert("You click the button");
+        }
+      }
+    })
+  </script>
+</body>
+</html>
