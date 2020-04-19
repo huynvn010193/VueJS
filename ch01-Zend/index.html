@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>VueJS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Header</h1>
+      <h1>Header</h1>
     </header>
     <div class="container">
-        <div class="list-blog">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sunt eveniet maxime magni in, nostrum
-                facilis, temporibus, quam facere sint est blanditiis harum dicta. Tempore suscipit ut hic. Deleniti,
-                qui.</p>
-        </div>
-        <div id="app">
-            <div class="cart">Giỏ hàng</div>
-            <div class="product">
-                <div class="product-image">
-                    <div class="image">
-                        <img src="images/blue.jpg" alt="">
-                    </div>
-                </div>
-                <div class="product-content">
-                    <h3 class="title">
-                    <a href="#">{{ title }}</a>
-                    </h3>
-                    <p class="brand">Thương hiệu: No brand</p>
-                    <p class="quantity"> 0">Còn lại: 10 Sản phẩm</p>
-                    <p class="quantity">Sản phẩm đã hết hàng</p>
-                    <button class="add-to-cart">Add to cart</button>
-                </div>
+      <div class="list-blog">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sunt
+          eveniet maxime magni in, nostrum facilis, temporibus, quam facere sint
+          est blanditiis harum dicta. Tempore suscipit ut hic. Deleniti, qui.
+        </p>
+      </div>
+      <div id="app">
+        <div class="cart">Giỏ hàng</div>
+        <div class="product">
+          <div class="product-image">
+            <div class="image">
+              <img src="images/blue.jpg" alt="" />
             </div>
-            <div class="description">
-                <ul class="extra-info">
-                    <li>AAAAAA</li>
-                    <!-- <li>Thoát mồ hôi tốt</li>
+          </div>
+          <div class="product-content">
+            <h3 class="title">
+              <a v-bind:href="url" v-bind:target="target">{{ title }}</a>
+            </h3>
+            <p class="brand">Thương hiệu: No brand</p>
+            <div class="wrapper-price">
+              <div class="final-price">{{ formatPrice() }}</div>
+            </div>
+            <p class="quantity">Còn lại: 10 Sản phẩm</p>
+            <p class="quantity">Sản phẩm đã hết hàng</p>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+        </div>
+        <div class="description">
+          <ul class="extra-info">
+            <li>AAAAAA</li>
+            <!-- <li>Thoát mồ hôi tốt</li>
                     <li>Áo thun cổ tròn thể thao Hiye chuyên được may từ chất liệu nilon thoáng mát</li>
                     <li>Kết hợp thêm sợi thun tạo độ co giãn giúp người tiêu dùng thoải mái khi mặc</li>
                     <li>Chất liệu: polyester và thun</li> -->
-                </ul>
-                <h2>Chất liệu bền chặt&nbsp;</h2>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sunt eveniet maxime magni in, nostrum
-                facilis, temporibus, quam facere sint est blanditiis harum dicta. Tempore suscipit ut hic. Deleniti,
-                qui
-                <div></div>
-            </div>
-                
+          </ul>
+          <h2>Chất liệu bền chặt&nbsp;</h2>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sunt
+          eveniet maxime magni in, nostrum facilis, temporibus, quam facere sint
+          est blanditiis harum dicta. Tempore suscipit ut hic. Deleniti, qui
+          <div></div>
         </div>
+      </div>
     </div>
     <footer>
-        <h1>Footer</h1>
+      <h1>Footer</h1>
     </footer>
-</body>
-
+  </body>
 </html>
 
 <script src="main.js"></script>
